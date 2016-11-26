@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mvp_test</string>
+    <string name="userName">请输入用户名</string>
+    <string name="passWord">请输入密码</string>
+    <string name="btn_login">登录</string>
+    <string name="error_username">用户名错误</string>
+    <string name="error_password">密码错误</string>
+</resources>
