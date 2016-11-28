@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.tools.R;
 
 /**
- * Created by Administrator on 2016/11/22.
+ * Activity的基类
  */
 
 public abstract class BaseActivity extends Activity {
