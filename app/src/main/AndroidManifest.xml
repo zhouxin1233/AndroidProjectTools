@@ -79,6 +79,10 @@
             android:name=".activity.ProgressWebViewActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".activity.StarBarViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
     </application>
 
 </manifest>

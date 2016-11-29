@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.tools.R;
+import com.tools.activity.StarBarViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,14 +51,6 @@ public class PackageControlFragment extends Fragment {
     private void initData() {
         listDatas.add("三种自定义View的方法");
         listDatas.add("封装显示星星个数 常用评论数");
-        listDatas.add("利用万能Listview的adapter进行展示数据");
-        listDatas.add("流式布局显示标签，以及热搜关键词等功能");
-        listDatas.add("WebView的一些使用功能详解");
-        listDatas.add("上拉加载更多与下拉刷新的多种实现");
-        listDatas.add("日期以及地区等选择的多级联动");
-        listDatas.add("仿美团饿了吗等选择城市列表，以及城市定位");
-        listDatas.add("商品详情中图片展示轮播以及显示放大与缩小");
-        listDatas.add("分享的一些功能与UI自定义效果实现");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -68,6 +61,9 @@ public class PackageControlFragment extends Fragment {
                 switch (position) {
                     case 0: //三种自定义View的方法
 
+                        break;
+                    case 1://封装显示星星个数 常用评论数
+                        startActivity(new Intent(mContext, StarBarViewActivity.class));
                         break;
 //                    /**
 //                     * 封装显示星星个数 常用评论数
