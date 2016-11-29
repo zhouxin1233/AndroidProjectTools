@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import com.tools.R;
 import com.tools.activity.CameraOrSelectPhoto;
+import com.tools.activity.MoreAnimationStartActivity;
 import com.tools.activity.SystemAppFourMethodActivity;
 import com.tools.utils.LogUtil;
 
@@ -62,6 +63,7 @@ public class MainFragment extends Fragment {
     private void initData() {
         listDatas.add("退出app应用的多种实现方式");
         listDatas.add("选择照片或者拍照");
+        listDatas.add("Activity多种跳转样式动画效果");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -74,6 +76,9 @@ public class MainFragment extends Fragment {
                         break;
                     case 1:
                         intent = new Intent(mContext, CameraOrSelectPhoto.class);
+                        break;
+                    case 2:
+                        intent = new Intent(mContext, MoreAnimationStartActivity.class);
                         break;
                 }
                 if (intent != null) {
