@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.tools.R;
+import com.tools.activity.MyAdapterActivity;
 import com.tools.activity.StarBarViewActivity;
 
 import java.util.ArrayList;
@@ -51,6 +52,7 @@ public class PackageControlFragment extends Fragment {
     private void initData() {
         listDatas.add("三种自定义View的方法");
         listDatas.add("封装显示星星个数 常用评论数");
+        listDatas.add("封装ListView 和 Adapter");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -64,6 +66,9 @@ public class PackageControlFragment extends Fragment {
                         break;
                     case 1://封装显示星星个数 常用评论数
                         startActivity(new Intent(mContext, StarBarViewActivity.class));
+                        break;
+                    case 2://
+                        intent = new Intent(mContext, MyAdapterActivity.class);
                         break;
 //                    /**
 //                     * 封装显示星星个数 常用评论数

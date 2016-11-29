@@ -80,6 +80,8 @@ public class MainFragment extends Fragment {
                     case 2:
                         intent = new Intent(mContext, MoreAnimationStartActivity.class);
                         break;
+                    case 3:
+                        break;
                 }
                 if (intent != null) {
                     mContext.startActivity(intent);
