@@ -13,6 +13,7 @@ import com.tools.callback.OnGetByteArrayListener;
 import com.tools.callback.OnGetJsonObjectListener;
 import com.tools.callback.OnGetOkhttpStringListener;
 import com.tools.constant.Urls;
+import com.tools.utils.ActivityManagerUtils;
 import com.tools.utils.OkHttpUtils;
 import com.tools.utils.ToastUtils;
 
@@ -40,6 +41,7 @@ public class OkHttpActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        ActivityManagerUtils.getInstance().addActivity(this);
         setContentView(R.layout.activity_okhttp);
         btn_get_one = (Button) findViewById(R.id.btn_get_one);
         btn_get_two = (Button) findViewById(R.id.btn_get_two);
