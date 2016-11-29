@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.tools.R;
+import com.tools.activity.CameraOrSelectPhoto;
 import com.tools.activity.SystemAppFourMethodActivity;
 import com.tools.utils.LogUtil;
 
@@ -43,7 +44,6 @@ public class MainFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView(view);
-
     }
 
     @Override
@@ -61,6 +61,7 @@ public class MainFragment extends Fragment {
      */
     private void initData() {
         listDatas.add("退出app应用的多种实现方式");
+        listDatas.add("选择照片或者拍照");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -70,6 +71,9 @@ public class MainFragment extends Fragment {
                 switch (position) {
                     case 0:
                         intent = new Intent(mContext, SystemAppFourMethodActivity.class);
+                        break;
+                    case 1:
+                        intent = new Intent(mContext, CameraOrSelectPhoto.class);
                         break;
                 }
                 if (intent != null) {
