@@ -6,6 +6,7 @@ import android.widget.Button;
 import com.tools.R;
 import com.tools.base.BaseActivity;
 
+
 /**
  * WebView的使用功能大全
  */
@@ -32,12 +33,12 @@ public class WebViewActivity extends BaseActivity {
         btn_01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(WebViewPullActivity.class);
+                startActivity(WebViewPullRefreshActivity.class);
             }
         });
-        /**
-         * WebView播放优酷视频(真机测试)
-         */
+//        /**
+//         * WebView播放优酷视频(真机测试)
+//         */
 //        btn_02.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

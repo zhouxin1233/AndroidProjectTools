@@ -1,4 +1,10 @@
 package com.tools.view;
+/**
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ */
 
 import android.content.Context;
 import android.os.Handler;
@@ -21,6 +27,9 @@ import com.tools.callback.OnRefreshWebViewListener;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+
+
 /**
  * 自定义的布局，用来管理二个子控件，其中一个是下拉头，一个是包含内容的pullableView（可以是实现Pullable接口的的任何View），
  */

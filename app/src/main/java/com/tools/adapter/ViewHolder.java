@@ -24,7 +24,6 @@ public class ViewHolder {
 
 	public static ViewHolder getHolder(Context context, View convertView,
 									   ViewGroup parent, int layoutId, int position) {
-
 		if (convertView == null) {
 			return new ViewHolder(context, parent, layoutId, position);
 
@@ -46,9 +45,5 @@ public class ViewHolder {
 			mViews.put(viewId, view);	
 		}
 		return (T) view;
-		
 	}
-	
-	
-	
 }

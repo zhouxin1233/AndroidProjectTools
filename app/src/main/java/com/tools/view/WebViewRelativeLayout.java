@@ -1,4 +1,4 @@
-package com.tools.activity;
+package com.tools.view;
 
 import android.content.Context;
 import android.os.Build;
@@ -11,13 +11,11 @@ import android.widget.RelativeLayout;
 
 import com.tools.R;
 import com.tools.callback.OnRefreshWebViewListener;
-import com.tools.view.WebViewPullToRefreshView;
-
 
 /**
  * 自定义的WebView 支持下拉刷新的功能
  */
-public class WebViewPullActivity extends RelativeLayout {
+public class WebViewRelativeLayout extends RelativeLayout {
 
     private Context ctx;
     /**
@@ -29,19 +27,19 @@ public class WebViewPullActivity extends RelativeLayout {
      */
     private WebViewPullToRefreshView refreshView;
 
-    public WebViewPullActivity(Context context) {
+    public WebViewRelativeLayout(Context context) {
         super(context);
         initView(context);
         initWebView();
     }
 
-    public WebViewPullActivity(Context context, AttributeSet attrs) {
+    public WebViewRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context);
         initWebView();
     }
 
-    public WebViewPullActivity(Context context, AttributeSet attrs, int defStyle) {
+    public WebViewRelativeLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initView(context);
         initWebView();
@@ -49,7 +47,7 @@ public class WebViewPullActivity extends RelativeLayout {
 
     private void initView(Context context) {
         ctx = context;
-        LayoutInflater.from(context).inflate(R.layout.david_webview_layout, this);
+        LayoutInflater.from(context).inflate(R.layout.view_webview_layout, this);
         refreshView = (WebViewPullToRefreshView) findViewById(R.id.refresh_view);
         webView = (SafeWebView) findViewById(R.id.safe_webview);
     }

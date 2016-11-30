@@ -80,9 +80,9 @@ public class CommonlyUsedFunctionFragment extends BaseLazyFragment {
                     /**
                      * 三种方式圆形头像图片的实现
                      */
-//                    case 0:
+                    case 0:
 //                        intent = new Intent(mContext, RoundZoomImageViewActivity.class);
-//                        break;
+                        break;
 //                    /**
 //                     * Splash首页添加广告progressBar进度
 //                     */

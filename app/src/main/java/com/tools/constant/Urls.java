@@ -4,8 +4,7 @@ package com.tools.constant;
  * 存放一些网络请求中所用的url地址
  */
 public class Urls {
-    /*程序员小冰CSDN博客*/
-    public static final String CSDN_BLOG_DAVID = "http://blog.csdn.net/qq_21376985";
+    public static final String CSDN_BLOG_DAVID = "http://lib.csdn.net/base/reactnative";
     /*程序员小冰新浪微博*/
     public static final String SINA_WEIBO = "http://weibo.com/mcxiaobing";
     /*程序员小冰GitHub主页*/

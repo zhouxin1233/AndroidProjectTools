@@ -70,9 +70,7 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
                             lists.addAll(txApiAppleBean.getNewslist());
                             if (mAdapter == null) {
                                 mAdapter = new MyAdapter(mContext, lists);
-                                /**
-                                 * listview绑定adapter
-                                 */
+                                //listview绑定adapter
                                 mListView.setAdapter(mAdapter);
                             } else {
                                 mAdapter.notifyDataSetChanged();

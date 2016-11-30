@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.tools.R;
 import com.tools.activity.MyAdapterActivity;
 import com.tools.activity.StarBarViewActivity;
+import com.tools.activity.WebViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,8 +68,11 @@ public class PackageControlFragment extends Fragment {
                     case 1://封装显示星星个数 常用评论数
                         startActivity(new Intent(mContext, StarBarViewActivity.class));
                         break;
-                    case 2://
+                    case 2://封装ListView 和 Adapter
                         intent = new Intent(mContext, MyAdapterActivity.class);
+                        break;
+                    case 3://WebView的使用与详解
+                        intent=new Intent(mContext, WebViewActivity.class);
                         break;
 //                    /**
 //                     * 封装显示星星个数 常用评论数
