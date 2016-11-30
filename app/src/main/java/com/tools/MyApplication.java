@@ -2,6 +2,7 @@ package com.tools;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.tools.utils.OkHttpUtils;
 
 /**
@@ -16,6 +17,8 @@ public class MyApplication extends Application {
         super.onCreate();
         app=this;
         initOkHttpUtils();
+        //初始化Fresco
+        Fresco.initialize(this);
     }
     public static MyApplication getApp() {
         return app;
