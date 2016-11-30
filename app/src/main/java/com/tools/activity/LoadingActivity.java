@@ -55,7 +55,7 @@ public class LoadingActivity extends BaseActivity {
         btn_show_two_loading = (Button) findViewById(R.id.btn_show_two_loading);
         btn_show_four_loading = (Button) findViewById(R.id.btn_show_four_loading);
         btn_show_five_loading = (Button) findViewById(R.id.btn_show_five_loading);
-        githubDialog = new SpotsDialog(mContext);
+        githubDialog = new SpotsDialog(mContext);//这里用的是三方的开源框架
 //        mWeiboDialog.show();
 
 
