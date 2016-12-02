@@ -10,9 +10,9 @@ public class DaggerActivity extends BaseActivity {
      * 在module的gradle中:
      * apply plugin: 'com.neenbedankt.android-apt'
      *
-     *   apt 'com.google.dagger:dagger-compiler:2.2'
-     *   provided 'org.glassfish:javax.annotation:10.0-b28'
-     *   compile 'com.google.dagger:dagger:2.2'
+     *   apt 'com.google.dagger:dagger-compiler:2.8'
+     *   compile 'com.google.dagger:dagger:2.8'
+     *   provided 'javax.annotation:jsr250-api:1.0'
      */
 
     @Override
