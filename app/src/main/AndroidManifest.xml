@@ -106,6 +106,8 @@
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity android:name=".activity.dagger2.DaggerActivity">
         </activity>
+        <activity android:name=".activity.dagger2.nomal.NormalActivity">
+        </activity>
     </application>
 
 </manifest>

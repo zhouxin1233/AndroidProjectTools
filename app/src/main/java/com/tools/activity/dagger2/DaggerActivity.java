@@ -1,5 +1,7 @@
 package com.tools.activity.dagger2;
 
+import android.view.View;
+
 import com.tools.R;
 import com.tools.base.BaseActivity;
 
@@ -10,9 +12,9 @@ public class DaggerActivity extends BaseActivity {
      * 在module的gradle中:
      * apply plugin: 'com.neenbedankt.android-apt'
      *
-     *   apt 'com.google.dagger:dagger-compiler:2.2'
-     *   provided 'org.glassfish:javax.annotation:10.0-b28'
-     *   compile 'com.google.dagger:dagger:2.2'
+     * apt 'com.google.dagger:dagger-compiler:2.8'
+     * compile 'com.google.dagger:dagger:2.8'
+     * provided 'javax.annotation:jsr250-api:1.0'
      */
 
     @Override
@@ -23,5 +25,15 @@ public class DaggerActivity extends BaseActivity {
     @Override
     protected void initData() {
 
+    }
+    public void click(View v){
+        switch (v.getId()){
+            case R.id.dagger_bt://正常的写法
+
+                break;
+            case R.id.dagger_bt1:
+
+                break;
+        }
     }
 }
