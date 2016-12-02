@@ -1,5 +1,7 @@
 package com.tools.activity.dagger2;
 
+import android.view.View;
+
 import com.tools.R;
 import com.tools.base.BaseActivity;
 
@@ -23,5 +25,15 @@ public class DaggerActivity extends BaseActivity {
     @Override
     protected void initData() {
 
+    }
+    public void click(View v){
+        switch (v.getId()){
+            case R.id.dagger_bt://正常的写法
+
+                break;
+            case R.id.dagger_bt1:
+
+                break;
+        }
     }
 }
