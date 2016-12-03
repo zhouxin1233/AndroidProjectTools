@@ -108,6 +108,18 @@
         </activity>
         <activity android:name=".activity.dagger2.nomal.NormalActivity">
         </activity>
+        <activity android:name=".activity.dagger2.step1_inject_component.Step1Activity">
+        </activity>
+        <activity android:name=".activity.dagger2.step2_module_provides.Step2Activity">
+        </activity>
+        <activity android:name=".activity.dagger2.step3_qualifier_named.Step3Activity">
+        </activity>
+        <activity android:name=".activity.dagger2.step4_dependence.Step4Activity">
+        </activity>
+        <activity android:name=".activity.dagger2.step5_scope_singleton.Step5Activity">
+        </activity>
+        <activity android:name=".activity.dagger2.step5_scope_singleton.Step5TwoActivity">
+        </activity>
     </application>
 
 </manifest>

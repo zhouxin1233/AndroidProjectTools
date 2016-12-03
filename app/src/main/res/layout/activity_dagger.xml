@@ -20,10 +20,36 @@
         android:onClick="click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/dagger_bt1"
-        android:text="第一步"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="1:Inject和Component"/>
+    <Button
+        android:id="@+id/dagger_bt2"
+        android:text="2:Module 和 Provides"
         android:onClick="click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/dagger_bt3"
+        android:text="3:Qualifier 和 Named"
+        android:onClick="click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/dagger_bt4"
+        android:text="4:@Component的dependence和@SubComponent"
+        android:onClick="click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/dagger_bt5"
+        android:text="5:@Scope和@Singleton"
+        android:onClick="click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
