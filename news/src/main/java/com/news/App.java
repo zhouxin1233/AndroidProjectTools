@@ -2,6 +2,7 @@ package com.news;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.StrictMode;
 
@@ -23,9 +24,12 @@ import java.io.PrintStream;
 public class App extends Application implements Thread.UncaughtExceptionHandler{
     RefWatcher mRefWatcher;
     ApplicationComponent mApplicationComponent;
+    public static Context mAppContext;
+    public static App mApp;
     @Override
     public void onCreate() {
         super.onCreate();
+        mApp=this;
         initLeakCanary(); //LeakCanary的初始化
         LogUtils.init(this,BuildConfig.DEBUG,true,'v',"MyTag");//Log的初始化
         initActivityLifecycleLogs();//打印出Activity的生命周期
@@ -33,8 +37,9 @@ public class App extends Application implements Thread.UncaughtExceptionHandler{
         Thread.setDefaultUncaughtExceptionHandler(this);//捕获全局的异常
         initApplicationComponent();
     }
-
-
+    public static App getApp(){
+        return mApp;
+    }
 
     private void initLeakCanary() {
         if (BuildConfig.DEBUG){
@@ -131,5 +136,11 @@ public class App extends Application implements Thread.UncaughtExceptionHandler{
         mApplicationComponent= DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
+    }
+    public ApplicationComponent getApplicationComponent(){
+        return mApplicationComponent;
+    }
+    public static Context getAppContext() {
+        return mAppContext;
     }
 }

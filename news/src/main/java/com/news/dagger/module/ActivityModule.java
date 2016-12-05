@@ -25,6 +25,7 @@ public class ActivityModule {
     Context provideActivitContext(){
         return mActivity;
     }
+
     @Provides
     @PreActivity
     @ContextLife("Activity")
