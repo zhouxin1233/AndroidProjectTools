@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/material_blue_500"
-    tools:context="com.news.mvp.ui.activitiy.SplashActivity">
+    tools:context="com.news.SplashActivity">
 
     <ImageView
         android:id="@+id/logo_outer_iv"

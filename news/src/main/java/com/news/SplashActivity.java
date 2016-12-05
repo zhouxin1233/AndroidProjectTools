@@ -1,4 +1,4 @@
-package com.news.mvp.ui.activitiy;
+package com.news;
 
 import android.animation.ValueAnimator;
 import android.content.Intent;
@@ -12,8 +12,7 @@ import android.widget.TextView;
 import com.blankj.utilcode.utils.LogUtils;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.news.MainActivity;
-import com.news.R;
+import com.news.mvp.ui.activitiy.NewsActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -85,7 +84,7 @@ public class SplashActivity extends AppCompatActivity {
                 .subscribe(new Consumer<Long>() {
                     @Override
                     public void accept(Long aLong) throws Exception {
-                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        startActivity(new Intent(SplashActivity.this, NewsActivity.class));
                         overridePendingTransition(0, android.R.anim.fade_out);
                         finish();
                     }
