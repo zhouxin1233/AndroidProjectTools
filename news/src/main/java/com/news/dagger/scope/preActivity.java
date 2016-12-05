@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import javax.inject.Scope;
 
 /**
- * 自定义注解 针对单利模式 生命周期
+ * 自定义注解 针对单利模式 生命周期啊啊啊啊
  */
 
 @Scope
