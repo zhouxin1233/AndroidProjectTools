@@ -143,4 +143,7 @@ public class App extends Application implements Thread.UncaughtExceptionHandler{
     public static Context getAppContext() {
         return mAppContext;
     }
+    public static RefWatcher getRefWatcher(){
+        return App.getApp().mRefWatcher;
+    }
 }

@@ -16,7 +16,7 @@ import com.news.mvp.ui.activitiy.NewsActivity;
 
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Observable;
+import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -78,7 +78,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void statActivityFinish() {
-        Observable.timer(1000, TimeUnit.MILLISECONDS)
+        Flowable.timer(1000, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Long>() {
