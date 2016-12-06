@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">News</string>
     <string name="internet_error">网络异常,请检查网络设置</string>
+    <string name="news">新闻</string>
 </resources>
