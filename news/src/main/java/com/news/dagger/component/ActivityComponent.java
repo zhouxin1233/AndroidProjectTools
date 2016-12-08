@@ -5,6 +5,7 @@ import android.content.Context;
 import com.news.dagger.module.ActivityModule;
 import com.news.dagger.qualifier.ContextLife;
 import com.news.dagger.scope.PreActivity;
+import com.news.mvp.ui.activitiy.NewsActivity;
 
 import dagger.Component;
 
@@ -20,4 +21,5 @@ public interface ActivityComponent {
     Context getApplicationContext();
 
 //    Activity getActivity();
+    void inject(NewsActivity newsActivity);
 }

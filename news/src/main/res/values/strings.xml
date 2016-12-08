@@ -2,4 +2,10 @@
     <string name="app_name">News</string>
     <string name="internet_error">网络异常,请检查网络设置</string>
     <string name="news">新闻</string>
+    <string name="photo">图片</string>
+    <string name="video">视频</string>
+    <string name="tools">设置</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

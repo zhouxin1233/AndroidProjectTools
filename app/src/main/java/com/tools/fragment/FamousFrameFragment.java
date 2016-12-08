@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.tools.R;
 import com.tools.activity.OkHttpActivity;
 import com.tools.activity.dagger2.DaggerActivity;
+import com.tools.activity.rxjava2.Rxjava2Activity;
 import com.tools.utils.LogUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +52,7 @@ public class FamousFrameFragment extends Fragment {
     private void initData() {
         listDatas.add("OkHttp的封装与网络请求详解");
         listDatas.add("Dagger2的基础学习");
+        listDatas.add("RxJava2的基础学习");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
         lv_famous_frame_fragment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -63,6 +65,9 @@ public class FamousFrameFragment extends Fragment {
                         break;
                     case 1://Dagger2的基础学习
                         startActivity(new Intent(mContext, DaggerActivity.class));
+                        break;
+                    case 2://rxjava2的基础学习
+                        startActivity(new Intent(mContext, Rxjava2Activity.class));
                         break;
                 }
                 if (intent != null) {

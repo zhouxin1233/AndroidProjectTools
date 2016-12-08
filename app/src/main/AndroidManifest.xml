@@ -120,6 +120,8 @@
         </activity>
         <activity android:name=".activity.dagger2.step5_scope_singleton.Step5TwoActivity">
         </activity>
+        <activity android:name=".activity.rxjava2.Rxjava2Activity">
+        </activity>
     </application>
 
 </manifest>

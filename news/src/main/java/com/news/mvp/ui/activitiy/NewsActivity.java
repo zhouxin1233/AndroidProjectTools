@@ -1,15 +1,42 @@
 package com.news.mvp.ui.activitiy;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import com.news.R;
+import com.news.annotations.BindValues;
+import com.news.event.ChannelChangeEvent;
+import com.news.mvp.ui.activitiy.base.BaseActivity;
+import com.news.utils.RxBus;
 
-public class NewsActivity extends AppCompatActivity {
+import io.reactivex.functions.Consumer;
+
+@BindValues(mIsHasNavigationView = true)
+public class NewsActivity extends BaseActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mDisposable= RxBus.getInstance().toFlowable(ChannelChangeEvent.class)
+                .subscribe(new Consumer<ChannelChangeEvent>() {
+                    @Override
+                    public void accept(ChannelChangeEvent channelChangeEvent) throws Exception {
+
+                    }
+                });
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+    public int getLayoutId() {
+        return R.layout.activity_news;
+    }
+
+    @Override
+    public void initInjector() {
+        mActivityComponent.inject(this);
+    }
+
+    @Override
+    public void initView() {
+
     }
 }

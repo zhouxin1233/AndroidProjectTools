@@ -26,6 +26,18 @@ public class MyUtils {
             disposable.dispose();
         }
     }
+    public static boolean getBoolean(String msg,boolean def){
+        SPUtils spUtils=new SPUtils(App.getAppContext(),Constants.SHARES_COLOURFUL_NEWS);
+        return spUtils.getBoolean(msg,def);
+    }
+    public static void setBoolean(String msg,boolean def){
+        SPUtils spUtils=new SPUtils(App.getAppContext(),Constants.SHARES_COLOURFUL_NEWS);
+        spUtils.putBoolean(msg,def);
+    }
+    public static void saveTheme(boolean isNight){
+        SPUtils spUtils=new SPUtils(App.getAppContext(),Constants.SHARES_COLOURFUL_NEWS);
+        spUtils.putBoolean(Constants.NIGHT_THEME_MODE, isNight);
+    }
     /**
      * 解决InputMethodManager内存泄露现象
      */
