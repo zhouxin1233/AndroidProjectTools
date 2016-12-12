@@ -6,6 +6,8 @@
     <!--字体大小-->
     <dimen name="medium">18sp</dimen>
     <dimen name="item_margin">8dp</dimen>
+    <dimen name="big_medium">20sp</dimen>
+    <dimen name="small">12sp</dimen>
 
 
 </resources>

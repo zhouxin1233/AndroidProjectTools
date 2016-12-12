@@ -12,8 +12,8 @@ import dagger.Component;
 /**
  * Created by Administrator on 2016/12/4 0004.
  */
-@Component(modules = ActivityModule.class,dependencies = ApplicationComponent.class)
 @PreActivity
+@Component(modules = ActivityModule.class,dependencies = ApplicationComponent.class)
 public interface ActivityComponent {
     @ContextLife("Activity")
     Context getActivityContext();

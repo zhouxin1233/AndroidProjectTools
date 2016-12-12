@@ -14,24 +14,31 @@
  * limitations under the License.
  *
  */
-package com.news.utils;
+package com.news.mvp.entity;
+
+import java.util.List;
 
 /**
  * @author 咖枯
- * @version 1.0 2016/8/20
+ * @version 1.0 2016/8/7
  */
-public class TransformUtils {
-//    public static <T> Observable.TransFormer<T, T> defaultSchedulers() {
-//        return new Observable.Transformer<T, T>() {
-//
-//            @Override
-//            public Observable<T> call(Observable<T> tObservable) {
-//                return tObservable
-//                        .unsubscribeOn(Schedulers.io())
-//                        .subscribeOn(Schedulers.io())
-//                        .observeOn(AndroidSchedulers.mainThread());
-//            }
-//        };
-//    }
-//    public static <T>Flowable.T
+public class GirlData {
+    private boolean isError;
+    private List<PhotoGirl> results;
+
+    public boolean isError() {
+        return isError;
+    }
+
+    public void setError(boolean error) {
+        isError = error;
+    }
+
+    public void setResults(List<PhotoGirl> results) {
+        this.results = results;
+    }
+
+    public List<PhotoGirl> getResults() {
+        return results;
+    }
 }

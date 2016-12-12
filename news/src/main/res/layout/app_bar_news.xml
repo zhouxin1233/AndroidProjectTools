@@ -41,6 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:onClick="click"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:maxHeight="?attr/actionBarSize"
                 android:padding="@dimen/item_margin"
@@ -58,6 +59,7 @@
         android:src="@drawable/ic_arrow_upward"
         android:layout_margin="16dp"
         android:layout_gravity="bottom|end"
+        android:onClick="click"
         app:layout_behavior="com.news.widget.ScrollAwareFABBehavior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

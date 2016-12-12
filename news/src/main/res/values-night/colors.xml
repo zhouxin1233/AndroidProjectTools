@@ -2,5 +2,6 @@
 <resources>
     <color name="night_mask">#90000000</color>
     <color name="primary_text">#deffffff</color>
+    <color name="container_background">#383F41</color>
 
 </resources>

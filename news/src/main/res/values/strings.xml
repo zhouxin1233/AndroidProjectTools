@@ -8,4 +8,9 @@
     <string name="night_mode">夜间模式</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="db_error">数据库出错</string>
+    <string name="retry_refresh_news">点我一下,重新加载</string>
+    <string name="loading">加载中...</string>
+    <!--共享过渡动画-->
+    <string name="transition_photos">transition_animation_news_photos</string>
 </resources>
