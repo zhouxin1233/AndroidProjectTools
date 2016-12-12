@@ -4,11 +4,16 @@ import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.blankj.utilcode.utils.LogUtils;
 import com.blankj.utilcode.utils.SPUtils;
 import com.news.App;
 import com.news.common.Constants;
 
 import java.lang.reflect.Field;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import io.reactivex.disposables.Disposable;
 
@@ -77,5 +82,20 @@ public class MyUtils {
                 t.printStackTrace();
             }
         }
+    }
+    /**
+     * from yyyy-MM-dd HH:mm:ss to MM-dd HH:mm
+     */
+    public static String formatDate(String before) {
+        String after;
+        try {
+            Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+                    .parse(before);
+            after = new SimpleDateFormat("MM-dd HH:mm", Locale.getDefault()).format(date);
+        } catch (ParseException e) {
+            LogUtils.e("转换新闻日期格式异常：" + e.toString());
+            return before;
+        }
+        return after;
     }
 }

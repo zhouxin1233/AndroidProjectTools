@@ -8,6 +8,8 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.news.App;
 import com.news.common.ApiConstants;
 import com.news.common.HostType;
+import com.news.mvp.entity.GirlData;
+import com.news.mvp.entity.NewsDetail;
 import com.news.mvp.entity.NewsSummary;
 
 import org.greenrobot.greendao.annotation.NotNull;
@@ -19,13 +21,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Observable;
+import io.reactivex.Flowable;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -34,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitManager {
-    private NetService mNetService;
+    private NewsService mNewsService;
 
     //设缓存有效期为两天
     private static final long CACHE_STALE_SEC = 60 * 60 * 24 * 2;
@@ -55,7 +58,7 @@ public class RetrofitManager {
         Retrofit retrofit=new Retrofit.Builder().baseUrl(ApiConstants.getHost(hostType))
                 .client(getsOkHttpClient()).addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
-        mNetService=retrofit.create(NetService.class);
+        mNewsService =retrofit.create(NewsService.class);
     }
     private OkHttpClient getsOkHttpClient(){
         if (sOkHttpClient==null){
@@ -141,8 +144,24 @@ public class RetrofitManager {
     /**
      *  example：http://c.m.163.com/nc/article/headline/T1348647909107/0-20.html
      */
-    public Observable<Map<String,List<NewsSummary>>> getNewsListObservable(
+    public Flowable<Map<String,List<NewsSummary>>> getNewsListFlowable(
             String newsType,String newsId,int startPage){
-        return mNetService.getNewsList(getCacheControl(),newsType,newsId,startPage);
+        return mNewsService.getNewsList(getCacheControl(),newsType,newsId,startPage);
+    }
+    /**
+     * example：http://c.m.163.com/nc/article/BG6CGA9M00264N2N/full.html
+     */
+    public Flowable<Map<String, NewsDetail>> getNewsDetailFlowable(String postId) {
+        LogUtils.d(Thread.currentThread().getName());
+
+        return mNewsService.getNewDetail(getCacheControl(), postId);
+    }
+
+    public Flowable<ResponseBody> getNewsBodyHtmlPhoto(String photoPath) {
+        return mNewsService.getNewsBodyHtmlPhoto(photoPath);
+    }
+
+    public Flowable<GirlData> getPhotoListFlowable(int size, int page) {
+        return mNewsService.getPhotoList(size, page);
     }
 }

@@ -5,6 +5,7 @@ import com.news.R;
 import com.news.db.NewsChannel;
 import com.news.db.NewsChannelManager;
 import com.news.mvp.callback.RequestCallBack;
+import com.news.mvp.model.NewsModel;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Administrator on 2016/12/7 0007.
  */
 
-public class NewsModelImpl implements NewsModel<List<NewsChannel>>{
+public class NewsModelImpl implements NewsModel<List<NewsChannel>> {
     @Inject
     public NewsModelImpl() {
     }
