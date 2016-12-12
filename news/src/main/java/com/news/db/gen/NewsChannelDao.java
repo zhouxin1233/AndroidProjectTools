@@ -154,7 +154,6 @@ public class NewsChannelDao extends AbstractDao<NewsChannel, Void> {
 
     @Override
     public boolean hasKey(NewsChannel entity) {
-
         return false;
     }
 

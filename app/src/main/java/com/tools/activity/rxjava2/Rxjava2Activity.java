@@ -6,6 +6,7 @@ import com.tools.utils.LogUtil;
 
 import org.reactivestreams.Publisher;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -41,8 +42,11 @@ public class Rxjava2Activity extends BaseActivity {
                 e.onNext(2);
                 e.onNext(3);
                 e.onNext(4);
+                LogUtil.I("e: "+4);
                 e.onComplete();
+                LogUtil.I("e: +onComplete");
                 e.onNext(5);
+                LogUtil.I("e: "+5);
             }
         }).subscribe(new Observer<Integer>() {
             Disposable mDisposable;
@@ -133,6 +137,11 @@ public class Rxjava2Activity extends BaseActivity {
                 return Flowable.fromIterable(list).delay(10, TimeUnit.MILLISECONDS);
             }
         }).subscribe();
+
+        double dis = Math.round(3244.6/100.0)/10.0;
+        DecimalFormat format = new DecimalFormat("0.0");
+        String mileage = format.format(dis);
+        LogUtil.I(mileage);
     }
 }
 /**
