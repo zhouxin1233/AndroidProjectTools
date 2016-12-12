@@ -1,7 +1,6 @@
 package com.news.mvp.presenter.impl;
 
 import com.news.db.NewsChannel;
-import com.news.mvp.model.NewsModel;
 import com.news.mvp.model.impl.NewsModelImpl;
 import com.news.mvp.presenter.NewsPresenter;
 import com.news.mvp.presenter.base.BasePresenterImpl;

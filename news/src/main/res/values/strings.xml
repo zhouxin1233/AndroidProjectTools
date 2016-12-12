@@ -13,4 +13,5 @@
     <string name="loading">加载中...</string>
     <!--共享过渡动画-->
     <string name="transition_photos">transition_animation_news_photos</string>
+    <string name="photo_collections">图集：%1$s</string>
 </resources>

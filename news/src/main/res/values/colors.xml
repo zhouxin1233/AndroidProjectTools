@@ -10,6 +10,7 @@
     <color name="secondary_text">#8a000000</color>
     <color name="tertiary_text">#8a000000</color>
     <color name="item_background">#FAFAFA</color>
+    <color name="image_place_holder">#DFDFDF</color>
 
 
 </resources>

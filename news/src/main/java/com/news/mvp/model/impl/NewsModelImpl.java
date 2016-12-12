@@ -5,7 +5,6 @@ import com.news.R;
 import com.news.db.NewsChannel;
 import com.news.db.NewsChannelManager;
 import com.news.mvp.callback.RequestCallBack;
-import com.news.mvp.model.NewsModel;
 
 import java.util.List;
 
