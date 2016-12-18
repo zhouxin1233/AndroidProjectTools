@@ -21,8 +21,8 @@ public class Step5Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step);
-//        DaggerStep5ActivityComponent.builder().potComponent(
-//                DaggerPotComponent.builder().flowerComponent(
+//        DaggerStep5ActivityComponent.build().potComponent(
+//                DaggerPotComponent.build().flowerComponent(
 //                        DaggerFlowerComponent.create()).build())
 //                .build().inject(this);
 

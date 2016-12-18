@@ -65,10 +65,10 @@ public class GlideAndFrescoUtils {
 //                }
 //            }
 //
-//            DrawableRequestBuilder builder = null;
+//            DrawableRequestBuilder build = null;
 //            if (isErrorImage) {
-//                builder = creator.error(errorId);
-//                builder.into(imageView);
+//                build = creator.error(errorId);
+//                build.into(imageView);
 //                return;
 //            }
 //            creator.into(imageView);
