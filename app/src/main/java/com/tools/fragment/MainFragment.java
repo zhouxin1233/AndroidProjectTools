@@ -16,6 +16,7 @@ import com.tools.R;
 import com.tools.activity.CameraOrSelectPhoto;
 import com.tools.activity.MoreAnimationStartActivity;
 import com.tools.activity.SystemAppFourMethodActivity;
+import com.tools.activity.material.MaterialActivity;
 import com.tools.utils.LogUtil;
 
 import java.util.ArrayList;
@@ -64,6 +65,7 @@ public class MainFragment extends Fragment {
         listDatas.add("退出app应用的多种实现方式");
         listDatas.add("选择照片或者拍照");
         listDatas.add("Activity多种跳转样式动画效果");
+        listDatas.add("Material的初步学习");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -81,6 +83,7 @@ public class MainFragment extends Fragment {
                         intent = new Intent(mContext, MoreAnimationStartActivity.class);
                         break;
                     case 3:
+                        intent = new Intent(mContext, MaterialActivity.class);
                         break;
                 }
                 if (intent != null) {
