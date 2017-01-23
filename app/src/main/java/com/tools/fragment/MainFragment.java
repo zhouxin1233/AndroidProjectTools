@@ -15,7 +15,9 @@ import android.widget.ListView;
 import com.tools.R;
 import com.tools.activity.CameraOrSelectPhoto;
 import com.tools.activity.MoreAnimationStartActivity;
+import com.tools.activity.PermissionActivity;
 import com.tools.activity.SystemAppFourMethodActivity;
+import com.tools.activity.ViewStubActivity;
 import com.tools.activity.material.MaterialActivity;
 import com.tools.utils.LogUtil;
 
@@ -66,7 +68,9 @@ public class MainFragment extends Fragment {
         listDatas.add("选择照片或者拍照");
         listDatas.add("Activity多种跳转样式动画效果");
         listDatas.add("Material的初步学习");
-        mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
+        listDatas.add("界面优化之_ViewStub的使用");
+        listDatas.add("6.0动态权限处理");
+        mAdatper = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
         lv_main_fragment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -84,6 +88,12 @@ public class MainFragment extends Fragment {
                         break;
                     case 3:
                         intent = new Intent(mContext, MaterialActivity.class);
+                        break;
+                    case 4:
+                        intent=new Intent(mContext,ViewStubActivity.class);
+                        break;
+                    case 5:
+                        intent=new Intent(mContext, PermissionActivity.class);
                         break;
                 }
                 if (intent != null) {

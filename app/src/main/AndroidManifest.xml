@@ -137,7 +137,13 @@
         <activity
             android:name=".activity.material.ParallaxScrollingTabsActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.SuspensionActivity" android:theme="@style/AppThemeNoActionBar">
+        <activity
+            android:name=".activity.SuspensionActivity"
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
+        <activity android:name=".activity.ViewStubActivity">
+        </activity>
+        <activity android:name=".activity.PermissionActivity">
         </activity>
     </application>
 
