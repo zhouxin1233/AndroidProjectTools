@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_suspension"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tools.activity.SuspensionActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:title="动态悬浮的改变哦"
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"/>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_suspention"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:id="@+id/suspention_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v4.widget.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:padding="8dp"
+                android:layout_width="44dp"
+                android:layout_height="44dp"/>
+        </RelativeLayout>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
