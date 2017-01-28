@@ -63,7 +63,6 @@ public class CommonlyUsedFunctionFragment extends BaseLazyFragment {
         listDatas.add("三种方式圆形头像图片的实现");
         listDatas.add("loading等待提示框多种实现方式");
         listDatas.add("动态改变悬浮的顶部栏");
-
         mAdatper = new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
 
