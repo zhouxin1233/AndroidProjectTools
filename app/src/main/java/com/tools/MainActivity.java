@@ -13,7 +13,7 @@ import com.tools.fragment.PackageControlFragment;
 import com.tools.utils.ActivityManagerUtils;
 
 /**
- * 主页面==>功能分类 测试一下
+ * 主页面==>功能分类 第二次测试一下
  */
 public class MainActivity extends BaseFragmentActivity implements View.OnClickListener{
     //首页fragment 知识点
