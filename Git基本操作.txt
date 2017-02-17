@@ -1,0 +1,53 @@
+touch readme.txt    新建一个文件
+rm 文件名  删除一个文件
+vi 文件名  用vim编辑器编辑文件 i插入 ZZ和:wq保存并退出 :q!放弃修改并退出
+ls -altrh 当前目录下的所有文件(可以看到隐藏文件) ls -a
+ls 
+
+位置概念 : 本地代码 待提交列表 本地仓库 远程仓库
+
+git status		→显示当前文件夹 git的状态
+git add 文件名		→添加到git中
+git status		→处于待提交状态    git status -s 简化提示
+git commit -m '提交日志'→ 提交到本地仓库
+git commit -am '说明日志'  → 直接从本地代码提交到本地仓库
+git log	查看日志	→  ctrl+F下一页  ctrl+b上一页
+git show commit编号	→ 查看具体修改的内容	
+
+git diff   查看本地代码和暂存区的区别
+git diff --staged 查看暂存区和本地仓库的区别
+git diff HEAD 查看本地仓库和远程HEAD的区别
+
+git reset --soft HEAD~`1→柔和性提交撤销最上面的commit
+git checkout 文件名 	→与add相反,撤销改动
+git checkout HEAD 文件名 直接从历史记录里面撤销
+git checkout -b rel/7.2 remotes/origin/rel/7.2  创建并切换分支
+
+git rm 文件名字		→删掉文件  
+git rm --cached 文件名 →删掉git文件 但保存本地文件
+
+git mv 文件名1 文件名2  →将文件名1改为文件名2
+
+git branch		→查看当Q前所有分支
+git branch 分支名	→ 创建分支
+git branch -d 分支名	→ 删除分支
+git checkout 分支名  	→切换到此分支
+
+git merge 分支名 	→将分支名的内容合并到当前分支
+
+git push origin master	→origin代表远程的一个别名,如:github,master是本地的当前分支
+git pull origin master 
+git push origin HEAD:refs/for/dev
+
+
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+git reset --hard commitId 回退到哪个版本
+git reset -hard HEAD~      回退到上一个版本
+
+
+
+echo '*~' > .gitignore 添加内容 忽略以~结尾的文件到 gitignore中
+http://edu.51cto.com/lesson/id-150655.html
+http://edu.51cto.com/lesson/id-33751.html

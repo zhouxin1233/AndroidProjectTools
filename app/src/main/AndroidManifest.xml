@@ -139,11 +139,14 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activity.SuspensionActivity"
+            android:exported="true"
             android:theme="@style/AppThemeNoActionBar">
         </activity>
         <activity android:name=".activity.ViewStubActivity">
         </activity>
         <activity android:name=".activity.PermissionActivity">
+        </activity>
+        <activity android:name=".activity.listview.GSListViewActivity">
         </activity>
     </application>
 
