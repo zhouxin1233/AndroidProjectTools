@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 封装控件
+ * 封装控件 测试创建远程分支有用吗
  */
 public class PackageControlFragment extends Fragment {
     private ListView lv_package_control_fragment;
