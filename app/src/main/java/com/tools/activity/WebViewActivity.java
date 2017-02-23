@@ -5,6 +5,8 @@ import android.widget.Button;
 
 import com.tools.R;
 import com.tools.base.BaseActivity;
+import com.tools.been.Person;
+import com.tools.utils.LogUtil;
 
 
 /**
@@ -23,6 +25,8 @@ public class WebViewActivity extends BaseActivity {
         btn_02 = (Button) findViewById(R.id.btn_02);
         btn_03 = (Button) findViewById(R.id.btn_03);
         btn_04 = (Button) findViewById(R.id.btn_04);
+
+        testBuilder();//测试建造者模式的写法
     }
 
     @Override
@@ -66,5 +70,14 @@ public class WebViewActivity extends BaseActivity {
 //            }
 //        });
 
+    }
+    public void testBuilder(){
+        Person person=new Person.Builder()
+                            .name("张三")
+                            .age(18)
+                            .height(34.6)
+                            .weight(76)
+                            .build();
+        LogUtil.D(person.toString());
     }
 }

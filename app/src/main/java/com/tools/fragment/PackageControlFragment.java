@@ -56,7 +56,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("封装显示星星个数 常用评论数");
         listDatas.add("封装ListView 和 Adapter");
         listDatas.add("简单的listview");
-        listDatas.add("WebView的使用与详解");
+        listDatas.add("WebView的使用与详解 和Builder建造者模式");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
 
@@ -68,7 +68,7 @@ public class PackageControlFragment extends Fragment {
 
                         break;
                     case 1://封装显示星星个数 常用评论数
-                        startActivity(new Intent(mContext, StarBarViewActivity.class));
+                        intent=(new Intent(mContext, StarBarViewActivity.class));
                         break;
                     case 2://封装ListView 和 Adapter
                         intent = new Intent(mContext, MyAdapterActivity.class);
